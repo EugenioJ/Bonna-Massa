@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=M, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Feedback</title>
+</head>
+
+<body class="bg-e6c191">
+    <main class="col">
+        <h1>Bonna Massa</h1>
+        <form class="pedidosForm">
+            <fieldset class="pedidos">
+                <div class="col userInfo">
+                    <legend>FEEDBACK</legend>
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" required placeholder="Digite Aqui">
+                    
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required placeholder="Email@dominio.com">
+                    <h2>Serviços</h2>
+                    <select required name="serviço">
+                        <option>Pães tradicionais</option>
+                        <option>Doces e bolos</option>
+                        <option>salgados</option>
+                        <option>Atendimento</option>
+                        <option>Ambiente</option>
+                        <option>Preços</option>
+                    </select>
+                </div>
+                <div>
+                </div>
+                <div class="col">
+                    <h2>Avaliação Geral</h2>
+                    <div class="row jc-se">
+                        <div class="row ai-center">
+                            <label for="excelente">Excelente</label>
+                            <input required type="radio" name="avaliação" id="excelente" value="excelente">
+                        </div>
+                        <div class="row ai-center">
+                            <label for="Bom">Bom</label>
+                            <input required type="radio" name="avaliação" id="bom" value="bom">
+                        </div>
+                        <div class="row ai-center">
+                            <label for="regular">regular</label>
+                            <input required type="radio" name="avaliação" id="regular" value="regular">
+                        </div>
+
+                        <div class="row ai-center">
+                            <label for="ruim">ruim</label>
+                            <input required type="radio" name="avaliação" id="ruim" value="ruim">
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+                <div class="col">
+                    <div class="col">
+                        <label>Comentários</label>
+                        <input type="textarea" name="comentario" id="comentario" value=>
+                    </div>
+    
+                    <div class="row ai-center">
+                        <label for="recomendaçao">Recomendaria para amigos?</label>
+                        <input type="checkbox" name="recomendaçao">
+                    </div>
+    
+                    <div class="row ai-center">
+                        <label for="autorização">Autoriza publicação do depoimento?</label>
+                        <input type="checkbox" name="autorizaçao">
+                    </div>
+                </div>
+
+                <button onclick="alert(enviado)">Enviar</button>
+
+            </fieldset>
+        </form>
+    </main>
+</body>
+
+</html>

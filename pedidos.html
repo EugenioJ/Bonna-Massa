@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main class="col bg-e6c191">
+        <h1>Bonna Massa</h1>
+        <form class="pedidosForm">
+            <fieldset class="pedidos">
+                <div class="col userInfo">
+                    <legend>PEDIDO</legend>
+                    <label for="name">Nome</label>
+                    <input type="text" placeholder="Digite Aqui" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="email@dominio.com" required>
+
+                    <label for="telefone">Telefone</label>
+                    <input name="telefone" id="telefone" type="tel"">
+                </div>
+                <div class="row jc-sa">
+                    <div class="col">
+                        <h2>Produto</h2>
+                        <div class="row jc-center">
+                            <div class="row ai-center">
+                                    <input type="radio" name="produto" id="pao" value="pao">
+                                    <label for="pao">Pão</label>
+                            </div>
+                            <div class="row ai-center">
+                                <input type="radio" name="produto" id="bolo" value="bolo">
+                                <label for="bolo">Bolo</label>
+                            </div>
+                            <div class="row ai-center">
+                                <input type="radio" name="produto" id="vinho" value="vinho">
+                                <label for="vinho">Vinho</label>
+                            </div>
+                            <div class="row ai-center">
+                                <input type="radio" name="produto" id="torta" value="torta">
+                                <label for="torta">torta</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <h2>Tamanho</h2>
+                        <div class="row jc-center">
+                            <div class="row ai-center">
+                                <input type="radio" name="tamanho" id="grande" value="grande">
+                                <label for="grande">Grande</label>
+                            </div>
+                            <div class="row ai-center">
+                                <input type="radio" name="tamanho" id="media" value="medio">
+                                <label for="media">Médio</label>
+                            </div>
+                            <div class="row ai-center">
+                                <input type="radio" name="tamanho" id="pequeno" value="pequeno">
+                                <label for="pequeno">Pequeno</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="">Recheio</h2>
+                <div class="col jc-center">
+                    <label for="recheio">Recheio</label>
+                    <select name="recheio" required>
+                        <option>Chocolate</option>
+                        <option>Morango</option>
+                        <option>baunilha</option>
+                        <option>Queijo</option>
+                    </select>
+                </div>
+                </div>
+
+
+                <div class="col jc-center">
+                    <h2>Entrega</h2>
+                    <label for="entrega">Data de Entrega</label>
+                    <input type="date" name="entrega" id="entrega" required>
+                </div>
+
+                <h2>Observações</h2>
+                <div class="col jc-center">
+
+
+                    <label for="obs">Observações</label>
+                    <input type="textarea" name="obs" id="obs">
+                </div>
+
+                <button onclick="alert(enviado)">Enviar</button>
+
+            </fieldset>
+        </form>
+    </main>
+</body>
+
+</html>

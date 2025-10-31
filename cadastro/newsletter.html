@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Cadastro</title>
+</head>
+
+<body class="bg-e6c191">
+    <main class="col container">
+        <h1>Bonna Massa</h1>
+        <form class="pedidosForm col wrap">
+            <div class="row jc-center">
+                <fieldset class="pedidos col f1">
+                    <div class="col userInfo">
+                        <legend class="ta-center">Dados Pessoais</legend>
+                        <label for="name">Nome</label>
+                        <input type="text" placeholder="Digite Aqui" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="email@dominio.com" required>
+
+
+                        <label for="telefone">Telefone</label>
+                        <input name="telefone" id="telefone" type="tel">
+
+                        <label for="nascimento">Data de nascimento</label>
+                        <input name="nascimento" id="nascimento" type="date">
+                    </div>
+
+
+
+                </fieldset>
+                <fieldset class="pedidos col f1">
+                    <div class="col userInfo">
+                        <legend class="ta-center">Endereço</legend>
+                        <label for="endereço">Endereço</label>
+                        <input type="text" name="nome" id="nome">
+
+                        <label for="numero">Numero</label>
+                        <input type="number" name="numero" id="numero" required>
+
+                        <label for="bairro">Bairro</label>
+                        <input type="text" name="bairro" id="bairro" required>
+
+                        <label for="cep">CEP</label>
+                        <input type="number[]" name="cep" id="cep" required pattern="[0-9]{5}-[0-9]{3}" required>
+                    </div>
+
+                </fieldset>
+            </div>
+            <div class="col ai-center jc-center">
+                <fieldset class="pedidos col jc-center">
+                    <label class="ta-center" for="preferencia">Marque seus produtos preferidos </label>
+                    <div class="row jc-sa">
+                        <div class="row ai-center">
+                            <label for="bolo">Bolo</label>
+                            <input type="checkbox" name="bolo" id="bolo">
+                        </div>
+
+
+                        <div class="row ai-center">
+                            <label for="paes">Pães Artesanais</label>
+                            <input type="checkbox" name="paes" id="paes">
+                        </div>
+
+                        <div class="row ai-center">
+                            <label for="salgados">Salgados</label>
+                            <input type="checkbox" name="salgados" id="salgados">
+                        </div>
+
+                        <div class="row ai-center">
+                            <label for="vinho">Vinhos</label>
+                            <input type="checkbox" name="vinho" id="vinho">
+                        </div>
+
+                        <div class="row ai-center">
+                            <label for="queijo">Queijos</label>
+                            <input type="checkbox" name="queijo" id="queijo">
+                        </div>
+                    </div>
+
+                </fieldset>
+            
+            <fieldset class="pedidos col jc-center ai-center">
+                <div class="row ai-center">
+                    <label for="promo">Aceito receber promoções por email </label>
+                    <input type="checkbox" name="promo" id="promo">
+                </div>
+
+                <div class="row ai-center">
+                    <label for="termos">Aceita os termos de uso </label>
+                    <input type="checkbox" name="termos" id="termos" required>
+                </div>
+
+            </fieldset>
+            </div>
+            <button onclick="alert(enviado)">Enviar</button>
+        </form>
+    </main>
+</body>
+
+</html>
