@@ -1,77 +1,96 @@
-<!doctype html>
-<html lang="pt-BR">
+<html>
 <head>
-  <meta charset="utf-8" />
-  <link rel="stylesheet" href="./css/style.css">
-  <title>Tabela de Produtos</title>
+    <meta charset="utf-8" />
+    <title>Produtos</title>
+
+    <link rel="stylesheet" href="./css/stylesProd.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body class="bg-e6c191">
-  <h2>Tabela de Produtos</h2>
-  <table border="1">
-    <thead>
-      <tr>
-        <th>Categoria</th>
-        <th>Produto</th>
-        <th>Descrição</th>
-        <th>Preço (R$)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Pão</td>
-        <td>Pão Frances</td>
-        <td>Pão francês, crocante por fora e macio por dentro.</td>
-        <td>R$0,95</td>
-      </tr>
-      <tr>
-        <td>Pão</td>
-        <td>Pão de hamburguer</td>
-        <td>macio, levemente adocicado e com textura fofa, ideal para sanduíches. Possui uma casca dourada e suave, que segura bem os recheios sem desmanchar.</td>
-        <td>R$2,50</td>
-      </tr>
-      <tr>
-        <td>Bolo</td>
-        <td>Bolo de fubá</td>
-        <td>Clássico caseiro, macio e muito saboroso.</td>
-        <td>R$8,00</td>
-      </tr>
-      <tr>
-        <td>Bolo</td>
-        <td>Bolo de chocolate</td>
-        <td>Clássico caseiro, macio e com calda cremosa de chocolate.</td>
-        <td>R$12,00</td>
-      </tr>
-      <tr>
-        <td>Bolo</td>
-        <td>Bolo de milho</td>
-        <td>preparado com milho fresco e leite, tem textura úmida e sabor delicadamente doce. Tradicional nas festas juninas, é macio, dourado e cheio de aroma caseiro.
-        <td>R$12,00</td>
-      </tr>
-      <tr>
-        <td>Queijo</td>
-        <td>Queijo Brie</td>
-        <td>Queijo francês de massa mole e sabor suave, ideal para vinhos brancos.</td>
-        <td>R$38,00</td>
-      </tr>
-      <tr>
-        <td>Queijo</td>
-        <td>Queijo Minas Frescal</td>
-        <td>Leve e úmido, perfeito para cafés da manhã e sobremesas.</td>
-        <td>R$18,00</td>
-      </tr>
-      <tr>
-        <td>Vinho</td>
-        <td>Vinho Tinto Cabernet Sauvignon</td>
-        <td>Vinho encorpado, com notas de frutas vermelhas e taninos marcantes.</td>
-        <td>R$79,00</td>
-      </tr>
-      <tr>
-        <td>Vinho</td>
-        <td>Vinho Branco Chardonnay</td>
-        <td>Vinho suave e frutado, excelente acompanhamento para queijos leves.</td>
-        <td>R$72,00</td>
-      </tr>
-    </tbody>
-  </table>
+<body>
+    <div class="models">
+        <div class="produto-item">
+            <a href="">
+                <div class="produto-item--img"><img src="" /></div>
+                <div class="produto-item--add">+</div>
+            </a>
+            <div class="produto-item--price">R$ --</div>
+            <div class="produto-item--name">--</div>
+            <div class="produto-item--desc">--</div>
+        </div>
+        <div class="cart--item">
+            <img src="" />
+            <div class="cart--item-nome">--</div>
+            <div class="cart--item--qtarea">
+                <button class="cart--item-qtmenos">-</button>
+                <div class="cart--item--qt">1</div>
+                <button class="cart--item-qtmais">+</button>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="menu-openner"><span>0</span>🛒</div>
+    </header>
+    <main>
+        <h1>produtos</h1>
+        <div class="produto-area"></div>
+    </main>
+    <aside>
+        <div class="cart--area">
+            <div class="menu-closer">❌</div>
+            <h1>Suas produtos</h1>
+            <div class="cart"></div>
+            <div class="cart--details">
+                <div class="cart--totalitem subtotal">
+                    <span>Subtotal</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart--totalitem desconto">
+                    <span>Desconto (-10%)</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart--totalitem total big">
+                    <span>Total</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart--finalizar">Finalizar a compra</div>
+            </div>
+        </div>
+    </aside>
+    <div class="produtoWindowArea">
+        <div class="produtoWindowBody">
+            <div class="produtoInfo--cancelMobileButton">Voltar</div>
+            <div class="produtoBig">
+                <img src="" />
+            </div>
+            <div class="produtoInfo">
+                <h1>--</h1>
+                <div class="produtoInfo--desc">--</div>
+                <div class="produtoInfo--sizearea">
+                    <div class="produtoInfo--sector">Tamanho</div>
+                    <div class="produtoInfo--sizes">
+                        <div data-key="0" class="produtoInfo--size">PEQUENO <span>--</span></div>
+                        <div data-key="1" class="produtoInfo--size">MÉDIO <span>--</span></div>
+                        <div data-key="2" class="produtoInfo--size selected">GRANDE <span>--</span></div>
+                    </div>
+                </div>
+                <div class="produtoInfo--pricearea">
+                    <div class="produtoInfo--sector">Preço</div>
+                    <div class="produtoInfo--price">
+                        <div class="produtoInfo--actualPrice">R$ --</div>
+                        <div class="produtoInfo--qtarea">
+                            <button class="produtoInfo--qtmenos">-</button>
+                            <div class="produtoInfo--qt">1</div>
+                            <button class="produtoInfo--qtmais">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="produtoInfo--addButton">Adicionar ao carrinho</div>
+                <div class="produtoInfo--cancelButton">Cancelar</div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./js/produtos.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
 </body>
 </html>
