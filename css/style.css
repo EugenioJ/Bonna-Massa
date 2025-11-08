@@ -1,66 +1,45 @@
+
 body {
     margin: 0px;
     background-color: #dec6a6;
     color: #6b4f36;
-    box-sizing: border-box;
+    box-sizing: border-box; /* mantido como no original */
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     position: relative;
 }
-.none {
-    display: none !important;
-}
-.jc-center {
-    justify-content: center;
-}
-.jc-sa{
-    justify-content: space-around;
-}
-.jc-fe {
-    justify-content: flex-end;
-}
-.ai-center{
-    align-items: center;
 
-}
-.jc-left {
-    justify-content: left;
-}
-.jc-se{
-    justify-content: space-evenly;
-}
-.ta-left {
-    text-align: left;
-}
-.ta-center {
-    text-align: center;
-}
-f1{
-    flex:1
-}
 img {
     width: 300px;
 }
-.container {
-    display: flex;
-    width: 90dvw;
-    margin: 0 auto;
-}
-.row {
-    display: flex;
-    flex-direction: row;
-}
-.col {
-    display: flex;
-    flex-direction: column;
-}
-.social {
-    width: 100vw;
-    height: auto;
-    display: flex;
-    justify-content: center;
-}
 
+li { list-style-type: none; }
+.none { display: none !important; }
+
+/* ===========================
+   Utilitários
+   =========================== */
+.jc-center { justify-content: center; }
+.jc-sa { justify-content: space-around; }
+.jc-fe { justify-content: flex-end; }
+.ai-center { align-items: center; }
+.ac-center { align-content: center; }
+.jc-left { justify-content: left; }
+.jc-se { justify-content: space-evenly; }
+.ta-left { text-align: left; }
+.ta-center { text-align: center; }
+.f1 { flex:1; }
+.f2 { flex:2; }
+
+
+.container { display: flex; width: 90vw; margin: 0 auto; } /* corrigi para vw */
+.row { display: flex; flex-direction: row; }
+.col { display: flex; flex-direction: column; }
+.wrap { flex-wrap: wrap; }
+
+/* ===========================
+   Header / Menu
+   =========================== */
 header {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -71,7 +50,6 @@ header img {
     width: 150px;
     height: 100%;
 }
-
 header a {
     text-decoration: none;
     margin: 8px;
@@ -92,13 +70,60 @@ header a {
     transition: 0.3s;
     text-shadow: #f09d3ea2 1px 1px 5px;
 }
-
-.historia {
-    text-align: center;
+.menu img {
+    width: 50px; /* preservei o último valor que você tinha */
+    box-sizing: content-box;
+    margin-top: 10px;
 }
+
+/* ===========================
+   Tipografia
+   =========================== */
+p {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+}
+h1 {
+    font-weight: 1000;
+    font-size: 50px;
+    color: #3b2a1a;
+    margin: 25px;
+    text-align: center;
+    text-shadow: 1px 1px 5px #a9a7a6;
+}
+h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 800;
+    font-size: 45px;
+    color: #45220e;
+    text-align: center;
+    text-shadow: 1px 1px 3px #120b02;
+}
+h3 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 35px;
+    margin: 0px;
+    text-shadow: 1px 2px 3px #120b02;
+}
+h4 {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+/* ===========================
+   Seção História / Tradicional
+   =========================== */
+.historia { text-align: center; }
+.historia img {
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+}
+
 .trad {
     display: flex;
-    margin: 35px 0px 0px;
+    margin: 35px 0 0 0;
     height: 80vh;
     align-items: center;
     width: 100%;
@@ -118,10 +143,11 @@ header a {
     margin: 35px;
     width: 100%;
 }
-.our-bakery {
-    flex-wrap: wrap;
-    margin: 25px;
-}
+
+/* ===========================
+   Our bakery / cards / produtos
+   =========================== */
+.our-bakery { flex-wrap: wrap; margin: 25px; }
 .our-bakery div {
     display: flex;
     flex: 1;
@@ -129,45 +155,41 @@ header a {
     text-align: center;
     align-items: center;
 }
+
 .descricao {
     text-align: justify;
     flex: 1;
     height: 400px;
 }
-.descricao img {
-    flex: 1;
-}
+.descricao img { flex: 1; }
+
 .cards {
     margin: 50px;
     min-height: 300px;
     min-width: 150px;
 }
-.cards img {
-    width: 120px;
-}
+.cards img { width: 120px; }
 .cards h1 {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     color: #3b2a1a;
 }
-.produtos {
-    width: 75vw;
-}
+
+/* Produtos layout) */
+.produtos { width: 75vw; }
 .produtos img {
     width: 550px;
     height: 360px;
+    object-fit: cover;
 }
-.produtos ul {
-    flex: 1;
-    padding: 0px 0px 20px 0px;
-}
+.produtos ul { flex: 1; padding: 0 0 20px 0; }
 .produtos ul li {
     display: flex;
     flex: 1;
     text-align: center;
     align-content: center;
     flex-wrap: wrap;
-    padding: 0px;
-    margin: 0px 20px 0px 20px;
+    padding: 0;
+    margin: 0 20px;
 }
 .produtos section {
     display: flex;
@@ -177,13 +199,9 @@ header a {
     width: 100%;
     justify-content: center;
 }
-.produtos section div {
-    flex: 1;
-    width: 100%;
-}
-.produtos section ul {
-    flex: 1;
-}
+.produtos section div { flex: 1; width: 100%; }
+.produtos section ul { flex: 1; }
+
 .produtos a {
     height: 50px;
     width: 200px;
@@ -202,70 +220,17 @@ header a {
     text-shadow: #f09d3e 1px 1px 5px;
     transition: 0.3s;
 }
-p {
-    font-family: "Times New Roman", Times, serif;
-    font-size: 18px;
-}
-h1 {
-    font-weight: 1000;
-    font-size: 50px;
-    color: #3b2a1a;
-    margin: 25px;
-    text-align: center;
-}
-h2 {
-    font-family: "Playfair Display", serif;
-    font-weight: 800;
-    font-size: 45px;
-    color: #45220e;
-    text-align: center;
-}
-h3 {
-    font-family:
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Oxygen,
-        Ubuntu,
-        Cantarell,
-        "Open Sans",
-        "Helvetica Neue",
-        sans-serif;
 
-    font-size: 35px;
-    margin: 0px;
-}
-h4 {
-    font-family: "Playfair Display", serif;
-    font-weight: 400;
-    font-size: 25px;
-}
-.historia img {
-    width: 100%;
-    height: 600px;
-    border-radius: 10px;
-}
-.menu img {
-    width: 150px;
-    box-sizing: content-box;
-}
-
-li {
-    list-style-type: none;
-}
-
+/* ===========================
+   Informações
+   =========================== */
 #informacoes {
     background-color: #e6c191;
     box-sizing: border-box;
     margin-top: 55px;
-    padding: 30px 30px;
+    padding: 30px 0 0 0;
 }
-.info {
-    flex: 1;
-    justify-content: center;
-}
+.info { flex: 1; justify-content: center; }
 
 .fcards {
     box-sizing: border-box;
@@ -287,29 +252,22 @@ li {
     height: 145px;
     border-radius: 10px;
 }
-ol {
-    padding: 0px;
-    margin: 5px 0px;
-}
-.fcards h2 {
-    font-size: 15px;
-    padding: 0px;
-}
-.contato {
-    display: flex;
-    flex: 1;
-    height: 100vh;
+ol { padding: 0; margin: 5px 0; }
+.fcards h2 { font-size: 15px; padding: 0; }
 
-
-}
+/* ===========================
+   Contato / Formulário
+   =========================== */
+.contato { display: flex; flex: 1; height: 100vh; }
+.contato h2 { font-size: 15px; }
+.contato > div:first-child { max-width: 90%; }
 
 form {
     display: flex;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 25px;;
+    margin-top: 25px;
     height: 100%;
-   
 }
 input, select {
     border-radius: 5px;
@@ -318,27 +276,18 @@ input, select {
     height: 40px;
     background-color: #f2d9b6;
 }
-.userInfo label{
-    margin: 15px 0px 0px;
-}
-.pedidosForm h2{
-    margin: 10px 0px
-}
-.pedidos input{
-    margin-bottom: 0px;
-}
-.pedidosForm button{
+.userInfo label { margin: 15px 0 0; }
+.pedidosForm h2 { margin: 10px 0; }
+.pedidos input { margin-bottom: 0; }
+.pedidosForm button {
     width: 100%;
     height: 50px;
     margin-top: 15px;
+    box-shadow: 2px 5px 5px #7d5426;
+    text-shadow: 1px 1px 5px #120b02;
 }
-.contato fieldset {
-    border: none;
-    width: 100%;
-}
-#mensagem {
-    height: 50%;
-}
+.contato fieldset { border: none; width: 100%; }
+#mensagem { height: 50%; }
 form button {
     border-radius: 15px;
     height: 80px;
@@ -347,30 +296,51 @@ form button {
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     color: white;
     font-size: 20px;
+    box-shadow: 2px 5px 5px #7d5426;
+    text-shadow: 1px 1px 5px #120b02;
 }
-#informacoes iframe {
-    width: 85%;
-    height: 300px;
-}
-.contato > div:first-child{
-    max-width: 90%;
-}
-.pedidos{
-    width: 40%;
-    border: none
- 
-}
+#informacoes iframe { width: 85%; height: 300px; }
+.pedidos { width: 40%; border: none; }
 
-.contato h2 {
-    font-size: 15px;
+/* ===========================
+   botões fixos / ícones
+   =========================== */
+.wa-logo {
+    position: fixed;
+    width: 110px;
+    bottom: 15px;
+    height: 70px;
+    right: 5px;
+    cursor: pointer;
+    z-index: 1000;
 }
-.wrap {
-    flex-wrap: wrap;
+.wa-logo img { width: 100%; height: 100%; }
+
+.btn-return {
+    position: fixed;
+    top: 45px;
+    left: 70px;
+    right: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
 }
+.btn-return img { width: 100%; height: 100%; }
 
-.bg-e6c191{
-    background-color: #e6c191;
+/* ===========================
+   footer
+   =========================== */
+.b-foo {
+    padding: 30px 0 0 30px;
+    color: #b07838;
+    text-shadow: 3px 3px 3px #120b02;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+.b-foo a { color: white; text-decoration: none; margin: 5px 0; }
 
 
 
+/* classes de cor auxiliares*/
+.bg-e6c191 { background-color: #e6c191; }
+.bg-3b2a1a { background-color: #3b2a1a; width: 100%; }
